@@ -1514,7 +1514,7 @@ git commit -m "Add fireworks finale scene"
 - Consumes: `config.photos` paths (`photos/photo1.svg` … relative to the built site root), `AudioManager("music.mp3")`.
 - Produces: deploy pipeline — pushing to `main` publishes `dist/` to the `gh-pages` branch.
 
-- [ ] **Step 1: Create placeholder photos**
+- [x] **Step 1: Create placeholder photos**
 
 Create `public/photos/photo1.svg`, `photo2.svg`, `photo3.svg` — same template, different gradient colors and emoji (💗 / 🌸 / ⭐). Template for `photo1.svg`:
 
@@ -1533,7 +1533,7 @@ Create `public/photos/photo1.svg`, `photo2.svg`, `photo3.svg` — same template,
 
 `photo2.svg`: gradient `#ffd166` → `#ff6b9d`, emoji `🌸`. `photo3.svg`: gradient `#6bd4ff` → `#c5a3ff`, emoji `⭐`.
 
-- [ ] **Step 2: Generate placeholder music (best-effort)**
+- [x] **Step 2: Generate placeholder music (best-effort)**
 
 Run:
 
@@ -1552,7 +1552,7 @@ fi
 
 Expected: `public/music.mp3` exists, or the skip message printed. Either outcome is acceptable; do not install ffmpeg.
 
-- [ ] **Step 3: Create `.github/workflows/deploy.yml`**
+- [x] **Step 3: Create `.github/workflows/deploy.yml`**
 
 ```yaml
 name: Deploy to GitHub Pages
@@ -1581,7 +1581,7 @@ jobs:
           force_orphan: true
 ```
 
-- [ ] **Step 4: Create `README.md`**
+- [x] **Step 4: Create `README.md`**
 
 ```markdown
 # Birthday Page 💖
@@ -1619,7 +1619,7 @@ Pages to serve from the `gh-pages` branch (root).
 Run: `bun run build && bun run preview`
 Expected: build passes; preview serves the site. Walk through all 5 scenes once more in mobile emulation (390×844): envelope opens → letter types → balloons pop in order → candles dim the room → finale fires fireworks and shows the message with placeholder photos. Check mute toggle and that the page still works with `public/music.mp3` deleted (temporarily rename it, reload, confirm no breakage, restore).
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 ```bash
 git add public .github README.md
