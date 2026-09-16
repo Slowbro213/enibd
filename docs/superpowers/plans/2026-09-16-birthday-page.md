@@ -74,7 +74,7 @@ export class AudioManager {
 }
 ```
 
-- [ ] **Step 1: Create `package.json`**
+- [x] **Step 1: Create `package.json`**
 
 ```json
 {
@@ -98,7 +98,7 @@ export class AudioManager {
 }
 ```
 
-- [ ] **Step 2: Create `tsconfig.json`, `vite.config.ts`, `.gitignore`**
+- [x] **Step 2: Create `tsconfig.json`, `vite.config.ts`, `.gitignore`**
 
 ```json
 {
@@ -129,7 +129,7 @@ node_modules/
 dist/
 ```
 
-- [ ] **Step 3: Create `index.html`**
+- [x] **Step 3: Create `index.html`**
 
 ```html
 <!doctype html>
@@ -150,7 +150,7 @@ dist/
 </html>
 ```
 
-- [ ] **Step 4: Create `src/config.ts`**
+- [x] **Step 4: Create `src/config.ts`**
 
 ```ts
 export interface AppConfig {
@@ -174,7 +174,7 @@ export const config: AppConfig = {
 };
 ```
 
-- [ ] **Step 5: Create `src/scenes/types.ts`, `src/audio.ts` stub, and minimal `src/main.ts`**
+- [x] **Step 5: Create `src/scenes/types.ts`, `src/audio.ts` stub, and minimal `src/main.ts`**
 
 `src/scenes/types.ts` and `src/audio.ts`: use the exact code from the Interfaces block above.
 
@@ -185,7 +185,7 @@ import "./style.css";
 document.querySelector<HTMLDivElement>("#app")!.textContent = "🎂";
 ```
 
-- [ ] **Step 6: Create base `src/style.css`**
+- [x] **Step 6: Create base `src/style.css`**
 
 ```css
 :root {
@@ -306,12 +306,12 @@ button {
 }
 ```
 
-- [ ] **Step 7: Install and verify build**
+- [x] **Step 7: Install and verify build**
 
 Run: `bun install && bun run build`
 Expected: install succeeds; `dist/` is produced with `index.html` and assets; no TypeScript errors.
 
-- [ ] **Step 8: Commit**
+- [x] **Step 8: Commit**
 
 ```bash
 git add package.json tsconfig.json vite.config.ts index.html src .gitignore bun.lock
@@ -334,7 +334,7 @@ git commit -m "Scaffold Vite + TS birthday page project"
   - `toggleMute(): boolean` — returns new muted state; also mutes the music element
   - `muted: boolean`
 
-- [ ] **Step 1: Replace `src/audio.ts`**
+- [x] **Step 1: Replace `src/audio.ts`**
 
 ```ts
 import gsap from "gsap";
@@ -397,7 +397,7 @@ export class AudioManager {
 }
 ```
 
-- [ ] **Step 2: Wire the mute button in `src/main.ts`**
+- [x] **Step 2: Wire the mute button in `src/main.ts`**
 
 ```ts
 import "./style.css";
@@ -413,12 +413,12 @@ muteBtn.addEventListener("click", () => {
 document.querySelector<HTMLDivElement>("#app")!.textContent = "🎂";
 ```
 
-- [ ] **Step 3: Verify build**
+- [x] **Step 3: Verify build**
 
 Run: `bun run build`
 Expected: PASS, no TypeScript errors.
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```bash
 git add src/audio.ts src/main.ts
