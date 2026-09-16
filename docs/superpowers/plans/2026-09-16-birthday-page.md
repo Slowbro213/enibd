@@ -620,7 +620,7 @@ export class Fireworks {
 Run: `bun run build`
 Expected: PASS (modules compile even though nothing imports them yet — add `"noUnusedLocals": false` is NOT needed since they export everything).
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```bash
 git add src/fx
