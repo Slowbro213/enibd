@@ -7,13 +7,12 @@ export interface AppConfig {
   photos: string[];
 }
 
-// === EDIT THIS FILE to personalize the page ===
 export const config: AppConfig = {
-  name: "Beautiful",
+  name: "Eni",
   letterText:
-    "Happy birthday, my love!\nAnother year of you being the best part of my life.\nI hope today is as wonderful as you are.",
-  balloonWords: ["You", "are", "the", "cutest", "person", "ever"],
+    "GEZUAR DITLINDJEEENNN ENIIII!\nTE DUA SHUMMMM SHUM SHUMMM EDHE 10000000000.\nI HOPE YOU HAVE THE BEST BIRTHDAY EVERRR",
+  balloonWords: ["KUSH", "MA", "KA", "DITLINDJEN", "KUSH", "KUSH"],
   candleCount: 5,
-  finalMessage: "I love you to the moon and back 💕",
+  finalMessage: "I LOVE YOU ENI IMM",
   photos: ["photos/photo1.svg", "photos/photo2.svg", "photos/photo3.svg"],
 };
