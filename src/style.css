@@ -163,3 +163,50 @@ button {
     transform: scale(1.08);
   }
 }
+
+.letter-scene {
+  justify-content: flex-start;
+  padding-top: max(48px, env(safe-area-inset-top));
+  overflow-y: auto;
+}
+
+.letter-card {
+  background: #fffaf0;
+  border-radius: 16px;
+  padding: 24px;
+  width: min(92vw, 420px);
+  box-shadow: 0 10px 30px rgba(74, 44, 74, 0.2);
+}
+
+.letter-title {
+  font-size: 1.6rem;
+  color: var(--pink);
+  min-height: 2.2em;
+}
+
+.letter-text {
+  margin-top: 12px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  min-height: 6em;
+}
+
+.photo-strip {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  justify-content: center;
+}
+
+.photo-strip img {
+  width: 30%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.letter-scene .continue-btn {
+  margin: 24px 0;
+  flex-shrink: 0;
+}

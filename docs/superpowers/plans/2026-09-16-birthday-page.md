@@ -848,7 +848,7 @@ git commit -m "Add scene manager and envelope opening scene"
 - Consumes: scene-factory pattern (Task 4), `ctx.config.name`, `ctx.config.letterText`, `ctx.config.photos`, `ctx.audio.chime()`, `ctx.goToNext()`.
 - Produces: `createLetterScene(): Scene`.
 
-- [ ] **Step 1: Create `src/scenes/letter.ts`**
+- [x] **Step 1: Create `src/scenes/letter.ts`**
 
 ```ts
 import gsap from "gsap";
@@ -909,7 +909,7 @@ export function createLetterScene(): Scene {
 }
 ```
 
-- [ ] **Step 2: Register the scene in `src/main.ts`**
+- [x] **Step 2: Register the scene in `src/main.ts`**
 
 Add the import and append to the array — the file changes to:
 
@@ -920,7 +920,7 @@ import { createLetterScene } from "./scenes/letter";
 const scenes: Scene[] = [createEnvelopeScene(), createLetterScene()];
 ```
 
-- [ ] **Step 3: Append letter styles to `src/style.css`**
+- [x] **Step 3: Append letter styles to `src/style.css`**
 
 ```css
 .letter-scene {
@@ -971,13 +971,13 @@ const scenes: Scene[] = [createEnvelopeScene(), createLetterScene()];
 }
 ```
 
-- [ ] **Step 4: Verify build + manual check**
+- [x] **Step 4: Verify build + manual check**
 
 Run: `bun run build`
 Expected: PASS.
 Manual: `bun run dev` → open envelope → letter types out, continue button appears, tapping it is a no-op (last scene). Mute button now visible.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add src/scenes/letter.ts src/main.ts src/style.css

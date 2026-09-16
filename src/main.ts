@@ -4,8 +4,9 @@ import { config } from "./config";
 import { AudioManager } from "./audio";
 import type { Scene, SceneContext } from "./scenes/types";
 import { createEnvelopeScene } from "./scenes/envelope";
+import { createLetterScene } from "./scenes/letter";
 
-const scenes: Scene[] = [createEnvelopeScene()];
+const scenes: Scene[] = [createEnvelopeScene(), createLetterScene()];
 
 const app = document.querySelector<HTMLDivElement>("#app")!;
 const audio = new AudioManager("music.mp3");
