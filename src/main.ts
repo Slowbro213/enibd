@@ -7,12 +7,14 @@ import { createEnvelopeScene } from "./scenes/envelope";
 import { createLetterScene } from "./scenes/letter";
 import { createBalloonsScene } from "./scenes/balloons";
 import { createCakeScene } from "./scenes/cake";
+import { createFinaleScene } from "./scenes/finale";
 
 const scenes: Scene[] = [
   createEnvelopeScene(),
   createLetterScene(),
   createBalloonsScene(),
   createCakeScene(),
+  createFinaleScene(),
 ];
 
 const app = document.querySelector<HTMLDivElement>("#app")!;

@@ -1337,7 +1337,7 @@ git commit -m "Add cake and candles scene"
 - Consumes: scene-factory pattern, `ctx.config.name`, `ctx.config.finalMessage`, `ctx.config.photos`, `ctx.audio.chime()`, `Fireworks` (Task 3: `new Fireworks(canvas)`, `start()`, `stop()`, `explode()`), `canvas-confetti` default export `confetti(options)`.
 - Produces: `createFinaleScene(): Scene`. Behavior contract: "Make a wish ✨" button starts fireworks + repeating confetti rain and reveals the final message; a "More fireworks! 🎆" replay button re-triggers a celebration burst. Under `prefers-reduced-motion`, fireworks and confetti rain are skipped and the message is shown directly.
 
-- [ ] **Step 1: Create `src/scenes/finale.ts`**
+- [x] **Step 1: Create `src/scenes/finale.ts`**
 
 ```ts
 import gsap from "gsap";
@@ -1424,7 +1424,7 @@ export function createFinaleScene(): Scene {
 }
 ```
 
-- [ ] **Step 2: Register the scene in `src/main.ts`**
+- [x] **Step 2: Register the scene in `src/main.ts`**
 
 ```ts
 import { createFinaleScene } from "./scenes/finale";
@@ -1438,7 +1438,7 @@ const scenes: Scene[] = [
 ];
 ```
 
-- [ ] **Step 3: Append finale styles to `src/style.css`**
+- [x] **Step 3: Append finale styles to `src/style.css`**
 
 ```css
 .finale-scene {
@@ -1487,13 +1487,13 @@ const scenes: Scene[] = [
 }
 ```
 
-- [ ] **Step 4: Verify build + manual check**
+- [x] **Step 4: Verify build + manual check**
 
 Run: `bun run build`
 Expected: PASS.
 Manual: full walkthrough end-to-end in mobile emulation. Tap "Make a wish" → fireworks + confetti + message. Replay button re-triggers bursts. Mute toggle works from the letter scene onward.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add src/scenes/finale.ts src/main.ts src/style.css
