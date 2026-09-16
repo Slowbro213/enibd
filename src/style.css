@@ -250,3 +250,68 @@ button {
   height: 16px;
   background: rgba(0, 0, 0, 0.2);
 }
+
+.cake {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.candles {
+  display: flex;
+  gap: clamp(12px, 4vw, 24px);
+  margin-bottom: -8px;
+  z-index: 1;
+}
+
+.candle {
+  width: 24px;
+  height: 64px;
+  border-radius: 6px;
+  background: repeating-linear-gradient(
+    45deg,
+    #fff,
+    #fff 6px,
+    var(--pink) 6px,
+    var(--pink) 12px
+  );
+  position: relative;
+}
+
+.flame {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  width: 16px;
+  height: 22px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  background: radial-gradient(circle at 50% 70%, #fff3b0, var(--yellow) 60%, #ff9f1c);
+  animation: flicker 0.25s ease-in-out infinite alternate;
+  box-shadow: 0 0 18px 6px rgba(255, 209, 102, 0.6);
+}
+
+@keyframes flicker {
+  from {
+    transform: translateX(-50%) scale(1);
+  }
+  to {
+    transform: translateX(-50%) scale(1.15, 0.9);
+  }
+}
+
+.candle.out .flame {
+  display: none;
+}
+
+.cake-body {
+  font-size: clamp(120px, 45vw, 220px);
+  line-height: 1;
+}
+
+.dim-overlay {
+  position: absolute;
+  inset: 0;
+  background: #1a1030;
+  opacity: 0;
+  pointer-events: none;
+}

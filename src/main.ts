@@ -6,11 +6,13 @@ import type { Scene, SceneContext } from "./scenes/types";
 import { createEnvelopeScene } from "./scenes/envelope";
 import { createLetterScene } from "./scenes/letter";
 import { createBalloonsScene } from "./scenes/balloons";
+import { createCakeScene } from "./scenes/cake";
 
 const scenes: Scene[] = [
   createEnvelopeScene(),
   createLetterScene(),
   createBalloonsScene(),
+  createCakeScene(),
 ];
 
 const app = document.querySelector<HTMLDivElement>("#app")!;

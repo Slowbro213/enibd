@@ -1168,7 +1168,7 @@ git commit -m "Add balloon pop scene"
 - Consumes: scene-factory pattern, `ctx.config.candleCount: number`, `ctx.audio.whoosh()`, `ctx.audio.chime()`, `ctx.goToNext()`.
 - Produces: `createCakeScene(): Scene`. Behavior contract: one tap per candle extinguishes it; a dim overlay fades in proportionally (`0.15 + out/total * 0.75`); when all candles are out, `goToNext()` fires after a 1.2s pause.
 
-- [ ] **Step 1: Create `src/scenes/cake.ts`**
+- [x] **Step 1: Create `src/scenes/cake.ts`**
 
 ```ts
 import gsap from "gsap";
@@ -1229,7 +1229,7 @@ export function createCakeScene(): Scene {
 }
 ```
 
-- [ ] **Step 2: Register the scene in `src/main.ts`**
+- [x] **Step 2: Register the scene in `src/main.ts`**
 
 ```ts
 import { createCakeScene } from "./scenes/cake";
@@ -1242,7 +1242,7 @@ const scenes: Scene[] = [
 ];
 ```
 
-- [ ] **Step 3: Append cake styles to `src/style.css`**
+- [x] **Step 3: Append cake styles to `src/style.css`**
 
 ```css
 .cake {
@@ -1311,13 +1311,13 @@ const scenes: Scene[] = [
 }
 ```
 
-- [ ] **Step 4: Verify build + manual check**
+- [x] **Step 4: Verify build + manual check**
 
 Run: `bun run build`
 Expected: PASS.
 Manual: walk to the cake scene; each tap kills a flame and dims the scene; after the last candle the scene goes dark and auto-advances (currently a no-op as the last scene).
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add src/scenes/cake.ts src/main.ts src/style.css
