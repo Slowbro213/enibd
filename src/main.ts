@@ -18,7 +18,7 @@ const scenes: Scene[] = [
 ];
 
 const app = document.querySelector<HTMLDivElement>("#app")!;
-const audio = new AudioManager("music.mp3");
+const audio = new AudioManager();
 let current = 0;
 let active: Scene | null = null;
 

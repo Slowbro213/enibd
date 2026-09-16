@@ -1,32 +1,16 @@
-import gsap from "gsap";
-
 export class AudioManager {
-  private music: HTMLAudioElement;
   private ctx: AudioContext | null = null;
   private unlocked = false;
   muted = false;
-
-  constructor(src: string) {
-    this.music = new Audio(src);
-    this.music.loop = true;
-    this.music.volume = 0;
-    // Missing file or load failure: stay silent, never break the page.
-    this.music.addEventListener("error", () => {});
-  }
 
   unlock() {
     if (this.unlocked) return;
     this.unlocked = true;
     this.ctx = new AudioContext();
-    this.music
-      .play()
-      .then(() => gsap.to(this.music, { volume: 0.5, duration: 2 }))
-      .catch(() => {});
   }
 
   toggleMute(): boolean {
     this.muted = !this.muted;
-    this.music.muted = this.muted;
     return this.muted;
   }
 
