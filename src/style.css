@@ -1,0 +1,116 @@
+:root {
+  --pink: #ff6b9d;
+  --pink-light: #ffa8c5;
+  --yellow: #ffd166;
+  --purple: #c5a3ff;
+  --blue: #6bd4ff;
+  --ink: #4a2c4a;
+  --bg-1: #ffe0ec;
+  --bg-2: #e0d4ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Baloo 2", system-ui, sans-serif;
+  color: var(--ink);
+  background: linear-gradient(160deg, var(--bg-1), var(--bg-2));
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+#app {
+  position: fixed;
+  inset: 0;
+}
+
+.scene {
+  position: absolute;
+  inset: 0;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.scene > div {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+#mute {
+  position: fixed;
+  top: max(12px, env(safe-area-inset-top));
+  right: 12px;
+  z-index: 50;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 22px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s;
+}
+
+#mute.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.heart {
+  position: absolute;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.continue-btn,
+.wish-btn,
+.replay-btn {
+  min-height: 48px;
+  padding: 12px 28px;
+  border-radius: 999px;
+  background: var(--pink);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  box-shadow: 0 4px 0 #d14d7d;
+}
+
+.continue-btn:active,
+.wish-btn:active,
+.replay-btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #d14d7d;
+}
+
+.hint {
+  font-size: 1.1rem;
+  font-weight: 700;
+  opacity: 0.75;
+  margin-bottom: 16px;
+}
