@@ -655,7 +655,7 @@ export function createXScene(): Scene {
 
 - Produces: `main.ts` scene manager contract — scenes live in an ordered array; `goToNext()` fades out the current scene, calls its `unmount()`, mounts the next; the mute button becomes visible from scene index ≥ 1.
 
-- [ ] **Step 1: Create `src/scenes/envelope.ts`**
+- [x] **Step 1: Create `src/scenes/envelope.ts`**
 
 ```ts
 import gsap from "gsap";
@@ -711,7 +711,7 @@ export function createEnvelopeScene(): Scene {
 }
 ```
 
-- [ ] **Step 2: Replace `src/main.ts` with the scene manager**
+- [x] **Step 2: Replace `src/main.ts` with the scene manager**
 
 ```ts
 import gsap from "gsap";
@@ -768,7 +768,7 @@ function activeContainer(): HTMLElement | null {
 mountScene(0);
 ```
 
-- [ ] **Step 3: Append envelope styles to `src/style.css`**
+- [x] **Step 3: Append envelope styles to `src/style.css`**
 
 ```css
 .envelope-scene {
@@ -821,14 +821,14 @@ mountScene(0);
 }
 ```
 
-- [ ] **Step 4: Verify build + manual check**
+- [x] **Step 4: Verify build + manual check**
 
 Run: `bun run build`
 Expected: PASS.
 Then: `bun run dev`, open the URL in a mobile device-emulation viewport (e.g. iPhone 14, 390×844).
 Expected: envelope wobbles on a pastel background, hearts float up, tap opens flap and fades to... (no next scene yet — `goToNext` is a no-op at the last scene, which is fine for now).
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add src/main.ts src/scenes/envelope.ts src/style.css

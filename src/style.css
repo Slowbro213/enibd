@@ -114,3 +114,52 @@ button {
   opacity: 0.75;
   margin-bottom: 16px;
 }
+
+.envelope-scene {
+  background: radial-gradient(circle at 50% 30%, #fff0f6, transparent 60%);
+}
+
+.envelope {
+  position: relative;
+  width: min(70vw, 300px);
+  aspect-ratio: 3 / 2;
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+.envelope-body {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: clamp(48px, 18vw, 96px);
+  background: var(--pink-light);
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(209, 77, 125, 0.35);
+}
+
+.envelope-flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: var(--pink);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  transform-origin: top;
+  z-index: 1;
+  backface-visibility: visible;
+}
+
+.prompt {
+  margin-top: 24px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  animation: pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  50% {
+    transform: scale(1.08);
+  }
+}
