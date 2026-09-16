@@ -439,7 +439,7 @@ git commit -m "Add audio manager with music fade-in and WebAudio sfx"
   - `burstHearts(container: HTMLElement, clientX: number, clientY: number, count?: number): void` — radial heart burst at a viewport point (converts to container-relative coords internally).
   - `class Fireworks { constructor(canvas: HTMLCanvasElement); start(): void; stop(): void; explode(): void }` — `start()` is a no-op under `prefers-reduced-motion`.
 
-- [ ] **Step 1: Create `src/fx/hearts.ts`**
+- [x] **Step 1: Create `src/fx/hearts.ts`**
 
 ```ts
 import gsap from "gsap";
@@ -516,7 +516,7 @@ export function burstHearts(
 }
 ```
 
-- [ ] **Step 2: Create `src/fx/fireworks.ts`**
+- [x] **Step 2: Create `src/fx/fireworks.ts`**
 
 ```ts
 interface Particle {
@@ -615,7 +615,7 @@ export class Fireworks {
 }
 ```
 
-- [ ] **Step 3: Verify build**
+- [x] **Step 3: Verify build**
 
 Run: `bun run build`
 Expected: PASS (modules compile even though nothing imports them yet — add `"noUnusedLocals": false` is NOT needed since they export everything).
