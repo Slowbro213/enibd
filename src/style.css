@@ -210,3 +210,43 @@ button {
   margin: 24px 0;
   flex-shrink: 0;
 }
+
+.balloons-scene {
+  justify-content: flex-start;
+  padding-top: max(48px, env(safe-area-inset-top));
+}
+
+.balloon-sentence {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  min-height: 2.5em;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--pink);
+}
+
+.balloon {
+  position: absolute;
+  bottom: -20%;
+  min-width: 72px;
+  min-height: 88px;
+  padding: 12px;
+  border-radius: 50% 50% 50% 50% / 55% 55% 45% 45%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  box-shadow: inset -6px -8px 0 rgba(0, 0, 0, 0.08);
+  z-index: 1;
+}
+
+.balloon::after {
+  content: "";
+  position: absolute;
+  bottom: -14px;
+  left: 50%;
+  width: 2px;
+  height: 16px;
+  background: rgba(0, 0, 0, 0.2);
+}

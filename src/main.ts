@@ -5,8 +5,13 @@ import { AudioManager } from "./audio";
 import type { Scene, SceneContext } from "./scenes/types";
 import { createEnvelopeScene } from "./scenes/envelope";
 import { createLetterScene } from "./scenes/letter";
+import { createBalloonsScene } from "./scenes/balloons";
 
-const scenes: Scene[] = [createEnvelopeScene(), createLetterScene()];
+const scenes: Scene[] = [
+  createEnvelopeScene(),
+  createLetterScene(),
+  createBalloonsScene(),
+];
 
 const app = document.querySelector<HTMLDivElement>("#app")!;
 const audio = new AudioManager("music.mp3");

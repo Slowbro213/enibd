@@ -997,7 +997,7 @@ git commit -m "Add typewriter letter scene"
 - Consumes: scene-factory pattern, `ctx.config.balloonWords: string[]`, `ctx.audio.pop()`, `burstHearts(container, clientX, clientY, count)` (Task 3).
 - Produces: `createBalloonsScene(): Scene`. Behavior contract: balloons release one at a time; a balloon that floats off-screen unpopped is re-released with the same word (scene can never soft-lock); after the last word is popped a continue button appears.
 
-- [ ] **Step 1: Create `src/scenes/balloons.ts`**
+- [x] **Step 1: Create `src/scenes/balloons.ts`**
 
 ```ts
 import gsap from "gsap";
@@ -1086,7 +1086,7 @@ export function createBalloonsScene(): Scene {
 }
 ```
 
-- [ ] **Step 2: Register the scene in `src/main.ts`**
+- [x] **Step 2: Register the scene in `src/main.ts`**
 
 ```ts
 import { createBalloonsScene } from "./scenes/balloons";
@@ -1098,7 +1098,7 @@ const scenes: Scene[] = [
 ];
 ```
 
-- [ ] **Step 3: Append balloon styles to `src/style.css`**
+- [x] **Step 3: Append balloon styles to `src/style.css`**
 
 ```css
 .balloons-scene {
@@ -1142,13 +1142,13 @@ const scenes: Scene[] = [
 }
 ```
 
-- [ ] **Step 4: Verify build + manual check**
+- [x] **Step 4: Verify build + manual check**
 
 Run: `bun run build`
 Expected: PASS.
 Manual: `bun run dev` → walk through to balloons; pop each balloon, sentence builds word by word, continue button appears after the last word. Let one balloon escape to confirm it re-releases.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add src/scenes/balloons.ts src/main.ts src/style.css
