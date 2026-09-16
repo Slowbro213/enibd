@@ -1,17 +1,11 @@
 export class AudioManager {
   private ctx: AudioContext | null = null;
   private unlocked = false;
-  muted = false;
 
   unlock() {
     if (this.unlocked) return;
     this.unlocked = true;
     this.ctx = new AudioContext();
-  }
-
-  toggleMute(): boolean {
-    this.muted = !this.muted;
-    return this.muted;
   }
 
   pop() {
@@ -27,7 +21,7 @@ export class AudioManager {
   }
 
   private blip(freq: number, dur: number, type: OscillatorType) {
-    if (!this.ctx || this.muted) return;
+    if (!this.ctx) return;
     const osc = this.ctx.createOscillator();
     const gain = this.ctx.createGain();
     osc.type = type;

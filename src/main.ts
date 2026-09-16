@@ -22,11 +22,6 @@ const audio = new AudioManager();
 let current = 0;
 let active: Scene | null = null;
 
-const muteBtn = document.querySelector<HTMLButtonElement>("#mute")!;
-muteBtn.addEventListener("click", () => {
-  muteBtn.textContent = audio.toggleMute() ? "🔇" : "🔊";
-});
-
 function mountScene(index: number) {
   const container = document.createElement("div");
   container.className = "scene";
@@ -51,7 +46,6 @@ function goToNext() {
       onComplete: () => oldContainer.remove(),
     });
   }
-  if (current >= 1) muteBtn.classList.add("visible");
   mountScene(current);
 }
 
